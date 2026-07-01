@@ -21,7 +21,7 @@ function roleFromJD(jd: string): string {
 /** 기능 5: 인터뷰 질문 정리·작성 (포지션 JD + 후보자 이력서 → 맞춤 질문지) */
 export const interviewFeature: Feature = {
   id: "interview",
-  label: "면접 질문",
+  label: "인터뷰 질문",
   web: false,
   hint: "왼쪽에 포지션 JD와 후보자 이력서를 넣고 '생성'을 누르면 맞춤 질문지가 나와요.",
   inputs: [
