@@ -28,7 +28,18 @@ npm install
 cp .env.example .env      # .env 를 열어 ANTHROPIC_API_KEY 입력 (없어도 mock 모드로 동작)
 ```
 
-## 실행 — 웹 화면 (메인 UI)
+## 공개 배포 (Render — 링크 하나로 접속)
+
+이 저장소에는 `render.yaml` 이 포함돼 있어, [Render](https://render.com) 무료 플랜으로 바로 배포할 수 있어요.
+
+1. render.com 가입(GitHub 계정으로) → **New → Blueprint**
+2. 이 저장소(`recruiting-bot-demo`) 선택 → `render.yaml` 자동 인식 → **Apply**
+3. 몇 분 뒤 `https://<이름>.onrender.com` 공개 URL 생성 → 누구나 접속
+
+기본은 **mock 모드(구조 미리보기)** 라 API 키 없이 무료로 돌아갑니다.
+(⚠️ 공개 URL에서 실제 AI 생성을 켜려면 Render 환경변수에 `ANTHROPIC_API_KEY` 를 넣어야 하는데, 접속자 누구나 호출 → 과금됩니다. 공개 데모는 mock 권장.)
+
+## 실행 — 웹 화면 (로컬)
 
 ```bash
 npm run web

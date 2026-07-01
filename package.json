@@ -5,20 +5,24 @@
   "type": "module",
   "description": "피플봇 (로컬 데모) — 회사의 참고 콘텐츠를 학습해 채용 콘텐츠(JD·소싱·면접·브랜딩)를 생성. 채용 요청 텍스트 → JD 초안 + 교정표 + 검토포인트표",
   "scripts": {
+    "start": "tsx src/web/server.ts",
     "jd": "tsx src/cli.ts",
     "web": "tsx src/web/server.ts",
     "slack": "tsx src/slack/app.ts",
     "typecheck": "tsc --noEmit"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.107.0",
     "@slack/bolt": "^4.7.3",
     "@types/express": "^4.17.25",
-    "express": "^4.22.2"
+    "express": "^4.22.2",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
 }
