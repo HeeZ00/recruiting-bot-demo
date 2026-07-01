@@ -1,11 +1,15 @@
 import type { Feature } from "../core.js";
 import { jdFeature } from "./jd.js";
-import { sourcingFeature } from "./sourcing.js";
 import { interviewFeature } from "./interview.js";
+import { debriefFeature } from "./debrief.js";
+import { sourcingFeature } from "./sourcing.js";
 import { brandingFeature } from "./branding.js";
 
-/** 기능 레지스트리 — 새 기능은 여기 배열에 추가하면 화면 탭/엔드포인트에 자동 반영 */
-export const features: Feature[] = [jdFeature, sourcingFeature, interviewFeature, brandingFeature];
+/**
+ * 기능 레지스트리 — 배열 순서가 곧 화면 탭 순서.
+ * 흐름: JD 작성 → 인터뷰 질문 → 인터뷰 결과 논의 → 소싱 메시지 → 채용 브랜딩
+ */
+export const features: Feature[] = [jdFeature, interviewFeature, debriefFeature, sourcingFeature, brandingFeature];
 
 const byId = new Map(features.map((f) => [f.id, f]));
 
